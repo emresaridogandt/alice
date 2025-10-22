@@ -34,7 +34,6 @@ class AliceCallsListScreen extends StatelessWidget {
     AliceCallsListSortOption.responseTime =>
       sortAscending
           ? (calls
-            ..sort()
             ..sort(
               (AliceHttpCall call1, AliceHttpCall call2) =>
                   call1.response?.time.compareTo(call2.response!.time) ?? -1,
